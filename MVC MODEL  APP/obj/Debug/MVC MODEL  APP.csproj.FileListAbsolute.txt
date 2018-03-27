@@ -1,0 +1,13 @@
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\bin\Debug\MVC MODEL  APP.exe.config
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\bin\Debug\MVC MODEL  APP.exe
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\bin\Debug\MVC MODEL  APP.pdb
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC MODEL  APP.csprojResolveAssemblyReference.cache
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC_MODEL__APP.Properties.Resources.resources
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC MODEL  APP.csproj.GenerateResource.Cache
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC MODEL  APP.exe
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC MODEL  APP.pdb
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC_MODEL__APP.Home.resources
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC_MODEL__APP.Views.EtudiantV.resources
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC_MODEL__APP.Views.ModuleV.resources
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC_MODEL__APP.Views.ProfesseurV.resources
+C:\Users\harir mohamed\Documents\Visual Studio 2015\Projects\MVC MODEL  APP\MVC MODEL  APP\obj\Debug\MVC_MODEL__APP.Views.NoteV.resources

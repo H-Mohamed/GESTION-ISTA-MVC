@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83428FE3-06E5-42B7-A0EB-855811E8B015}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVC_MODEL__APP</RootNamespace>
+    <AssemblyName>MVC MODEL  APP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlers\DB.cs" />
+    <Compile Include="Controlers\CETU.cs" />
+    <Compile Include="Controlers\CMOD.cs" />
+    <Compile Include="Controlers\CNOTE.cs" />
+    <Compile Include="Controlers\CPROF.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Etudiant.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\Professeur.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EtudiantV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EtudiantV.Designer.cs">
+      <DependentUpon>EtudiantV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModuleV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ModuleV.Designer.cs">
+      <DependentUpon>ModuleV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoteV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NoteV.Designer.cs">
+      <DependentUpon>NoteV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfesseurV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProfesseurV.Designer.cs">
+      <DependentUpon>ProfesseurV.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EtudiantV.resx">
+      <DependentUpon>EtudiantV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModuleV.resx">
+      <DependentUpon>ModuleV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NoteV.resx">
+      <DependentUpon>NoteV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProfesseurV.resx">
+      <DependentUpon>ProfesseurV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\write.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-publisher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-slider-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04-img-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dcm_banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usersfree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lgnimg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Make-Waves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\be9b9fc5a298318f2ee924e74d6be57c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-icon-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fond-carlift.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-img-slider.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-slider-21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11-600x342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-button-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test-paper.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
