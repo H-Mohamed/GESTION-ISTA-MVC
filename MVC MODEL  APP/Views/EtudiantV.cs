@@ -25,17 +25,78 @@ namespace MVC_MODEL__APP.Views
                 MVC_MODEL__APP.Home.home();
             };
             Refresh.Click += (object o, EventArgs e) =>
-            {
+            {try { 
                 EtudiantV_Load(o, e);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
             };
             Exit.Click += (object o, EventArgs e) =>
             {
                 Application.Exit();
-            };
+            }; 
             //DB controls
-
-            //Navcontrols
-
+            Add.Click += (object o, EventArgs e) =>
+            {
+                try{
+                    Controlers.CETU.Ajouter(Code.Text, Nom.Text, Prenom.Text, DNEt.Value.ToShortDateString(), Email.Text, DGV);
+                }
+                    catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
+            };
+            Del.Click += (object o, EventArgs e) =>
+            {
+                try {
+                    Controlers.CETU.Supprimer(Code.Text, DGV);
+                }
+                catch (Exception E)
+                    {
+                        MessageBox.Show(E.Message);
+                    } 
+            };
+            upd.Click += (object o, EventArgs e) =>
+            {
+                try
+                {
+                    Controlers.CETU.Ajouter(Code.Text, Nom.Text, Prenom.Text, DNEt.Value.ToShortDateString(), Email.Text, DGV);
+                    }
+                catch (Exception E)
+                    {
+                        MessageBox.Show(E.Message);
+                    }
+            };
+            srch.Click += (object o, EventArgs e) =>
+            {
+                try
+                {
+                    Resultat_Search(Code.Text);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
+            };
+            //Navcontrols 
+            Precedent.Click += (object o, EventArgs e) =>
+            {
+                bs.MovePrevious();
+            };
+            Suivant.Click += (object o, EventArgs e) =>
+            {
+                bs.MoveNext();
+            };
+            dernier.Click += (object o, EventArgs e) =>
+            {
+                bs.MoveLast();
+            };
+            premier.Click += (object o, EventArgs e) =>
+            {
+                bs.MoveFirst();
+            };
         }
         public void data_loading()
         {
@@ -45,6 +106,14 @@ namespace MVC_MODEL__APP.Views
         {
             set_behaviour(); data_loading();
             bs.DataSource = Controlers.CETU.ALL();
+        }
+        private void Resultat_Search(string codem)
+        {
+            Code.Text = Controlers.CETU.Rechercher(codem).codeE.ToString();
+            Nom.Text = Controlers.CETU.Rechercher(codem).nom.ToString();
+            Prenom.Text = Controlers.CETU.Rechercher(codem).prenom.ToString();
+            DNEt.Text = Controlers.CETU.Rechercher(codem).daten.ToString();
+            Email.Text = Controlers.CETU.Rechercher(codem).email.ToString();
         }
     }
 }

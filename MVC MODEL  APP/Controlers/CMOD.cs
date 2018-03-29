@@ -14,12 +14,12 @@ namespace MVC_MODEL__APP.Controlers
         {
             return Controlers.DB.PROC_DS("getModu").Tables[0];
         }
-        public static void Ajouter(int CODEModule, string NOM, int codeProf, DateTime DATEP,
+        public static void Ajouter(string CODEModule, string NOM, int codeProf, DateTime DATEP,
             DateTime DATER, DataGridView d)
         {
             Controlers.DB.load_DGV(d,
             (Controlers.DB.PROC_DS_Params("ADDMODULE", new SqlParameter[]
-                    {  new SqlParameter("@CM",CODEModule), new SqlParameter("@NOMM",NOM)
+                    {  new SqlParameter("@CM",int.Parse(CODEModule)), new SqlParameter("@NOMM",NOM)
                      , new SqlParameter("@CP",codeProf), new SqlParameter("@DATEP",DATEP)
                      , new SqlParameter("@DATEP",DATER)
             })).Tables[0]
@@ -48,7 +48,7 @@ namespace MVC_MODEL__APP.Controlers
                 Controlers.DB.load_DGV(
                     d,
                     (Controlers.DB.PROC_DS_Params("UPDMOD", new SqlParameter[]
-                    {  new SqlParameter("@CM",CODEModule), new SqlParameter("@NOMM",NOM)
+                    {  new SqlParameter("@CM",int.Parse(CODEModule)), new SqlParameter("@NOMM",NOM)
                      , new SqlParameter("@CP",codeProf), new SqlParameter("@DATEP",DATEP)
                      , new SqlParameter("@DATEP",DATER) 
                      })).Tables[0]
@@ -59,13 +59,13 @@ namespace MVC_MODEL__APP.Controlers
                 MessageBox.Show(CODEModule + " > ne correspond à aucun enregistrement ");
             }
         }
-        public static Models.Module Rechercher(int CODEModule)
+        public static Models.Module Rechercher(string CODEModule)
         {
             Models.Module e = new Models.Module();
             try
             {
                 DataTable t = Controlers.DB.PROC_DS_Params("unmodule", new SqlParameter[]
-                {  new SqlParameter("@codem",CODEModule)  }).Tables[0];
+                {  new SqlParameter("@codem",int.Parse(CODEModule))  }).Tables[0];
                 if (t.Rows.Count != 0)
                     //instancier l'Etudiant trouvé
                     e = new Models.Module(int.Parse(t.Rows[0][0].ToString()),

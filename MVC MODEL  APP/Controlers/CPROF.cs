@@ -20,7 +20,7 @@ namespace MVC_MODEL__APP.Controlers
         {
             Controlers.DB.load_DGV(d,
             (Controlers.DB.PROC_DS_Params("ADDPROF", new SqlParameter[]
-            { new SqlParameter("@CODEPROF",CODEPROF), new SqlParameter("@CODEPROF",NOM)
+            { new SqlParameter("@CODEPROF",int.Parse(CODEPROF)), new SqlParameter("@CODEPROF",NOM)
             , new SqlParameter("@CODEPROF",PRENOM), new SqlParameter("@CODEPROF",Diplome)
             , new SqlParameter("@CODEPROF",EMAIL)
             })).Tables[0]
@@ -33,7 +33,7 @@ namespace MVC_MODEL__APP.Controlers
                 Controlers.DB.load_DGV(
                     d,
                     (Controlers.DB.PROC_DS_Params("DELPROF", new SqlParameter[]
-                    { new SqlParameter("@CP",CP) })).Tables[0]
+                    { new SqlParameter("@CP",int.Parse(CP)) })).Tables[0]
                      );
             }
             catch
@@ -49,7 +49,7 @@ namespace MVC_MODEL__APP.Controlers
                 Controlers.DB.load_DGV(
                     d,
                     (Controlers.DB.PROC_DS_Params("UPDPROF", new SqlParameter[]
-                    {  new SqlParameter("@CE",CODEPROF), new SqlParameter("@NOMPROF",NOM)
+                    {  new SqlParameter("@CE",int.Parse(CODEPROF)), new SqlParameter("@NOMPROF",NOM)
                      , new SqlParameter("@PRENOMPROF",PRENOM), new SqlParameter("@DIPLOMEPROF",DIPLOME)
                      , new SqlParameter("@EMAILPROF",EMAIL)
                      })).Tables[0]
@@ -66,7 +66,7 @@ namespace MVC_MODEL__APP.Controlers
             try
             {
                 DataTable t = Controlers.DB.PROC_DS_Params("unetudiant", new SqlParameter[]
-                {  new SqlParameter("@codep",CODEPROF)  }).Tables[0];
+                {  new SqlParameter("@codep",int.Parse(CODEPROF))}).Tables[0];
                 if (t.Rows.Count != 0)
                     //instancier le Professeur trouvé
                     p = new Models.Professeur(int.Parse(t.Rows[0][0].ToString()),

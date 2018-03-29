@@ -133,7 +133,6 @@
             this.prof.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.prof.TabIndex = 2;
             this.prof.TabStop = false;
-
             // 
             // etud
             // 
@@ -209,6 +208,7 @@
             // Note
             // 
             this.Note.BackColor = System.Drawing.Color.Transparent;
+            this.Note.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Note.Image = global::MVC_MODEL__APP.Properties.Resources.test;
             this.Note.Location = new System.Drawing.Point(36, 188);
             this.Note.Name = "Note";

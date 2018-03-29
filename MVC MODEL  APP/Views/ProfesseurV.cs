@@ -28,7 +28,14 @@ namespace MVC_MODEL__APP.Views
             };
             Refresh.Click += (object o, EventArgs e) =>
             {
-                ProfesseurV_Load(o, e);
+                try
+                {
+                    ProfesseurV_Load(o, e);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
             };
             Exit.Click += (object o, EventArgs e) =>
             {
@@ -36,37 +43,63 @@ namespace MVC_MODEL__APP.Views
             };
             //DB controls
             Add.Click += (object o, EventArgs e) =>
-            {
+            {try { 
                 Controlers.CPROF.Ajouter(Codep.Text,Nomp.Text,Pnomp.Text,dipp.Text,emailp.Text,DGV);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
             };
             Del.Click += (object o, EventArgs e) =>
             {
-                Controlers.CPROF.Supprimer(Codep.Text, DGV);
+                try
+                {
+                    Controlers.CPROF.Supprimer(Codep.Text, DGV);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
             };
             upd.Click += (object o, EventArgs e) =>
             {
-                Application.Exit();
+            try { 
+                Controlers.CPROF.Modifier(Codep.Text, Nomp.Text, Pnomp.Text, dipp.Text, emailp.Text, DGV);
+            }
+                catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+
             };
             srch.Click += (object o, EventArgs e) =>
-            {
-                Application.Exit();
+            { 
+                try
+                {
+                    Resultat_Search(Codep.Text);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
             };
             //Navcontrols
             Precedent.Click += (object o, EventArgs e) =>
             {
-                Application.Exit();
+                bs.MovePrevious();
             };
             Suivant.Click += (object o, EventArgs e) =>
             {
-                Application.Exit();
+                bs.MoveNext();
             };
             dernier.Click += (object o, EventArgs e) =>
             {
-                Application.Exit();
+                bs.MoveLast();
             };
             premier.Click += (object o, EventArgs e) =>
             {
-                Application.Exit();
+                bs.MoveFirst();
             };
         }
         public void data_loading()
@@ -77,6 +110,13 @@ namespace MVC_MODEL__APP.Views
         {
             bs.DataSource = Controlers.CPROF.ALL();
         }
-         
+        private void Resultat_Search(string code)
+        {
+            Codep.Text = Controlers.CPROF.Rechercher(code).codeP.ToString();
+            Nomp.Text = Controlers.CPROF.Rechercher(code).nom.ToString();
+            Pnomp.Text = Controlers.CPROF.Rechercher(code).prenom.ToString();
+            dipp.Text = Controlers.CPROF.Rechercher(code).diplome.ToString();
+            emailp.Text = Controlers.CPROF.Rechercher(code).contact.ToString();
+        }
     }
 }

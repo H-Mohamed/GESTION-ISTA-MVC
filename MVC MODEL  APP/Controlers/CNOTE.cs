@@ -15,25 +15,25 @@ namespace MVC_MODEL__APP.Controlers
         {
             return Controlers.DB.PROC_DS("getNotes").Tables[0];
         }
-        public static void Ajouter(int CODEETUDIANT, int CODEMODULE, float Note, DataGridView d)
+        public static void Ajouter(string CODEETUDIANT, string CODEMODULE, string Note, DataGridView d)
         {
             Controlers.DB.load_DGV(d,
             (Controlers.DB.PROC_DS_Params("ADDNOTE", new SqlParameter[]
-            { new SqlParameter("@CODEE",CODEETUDIANT),
-              new SqlParameter("@CODEM",CODEMODULE),
-              new SqlParameter("@Note",Note)
+            { new SqlParameter("@CODEE",int.Parse(CODEETUDIANT)),
+              new SqlParameter("@CODEM",int.Parse(CODEMODULE)),
+              new SqlParameter("@Note",float.Parse(Note))
             })).Tables[0]
             );
         }
-        public static void Supprimer(int CE,int CM, DataGridView d)
+        public static void Supprimer(string CE,string CM, DataGridView d)
         {
             try
             {
                 Controlers.DB.load_DGV(
                     d,
                     (Controlers.DB.PROC_DS_Params("DELNOTE", new SqlParameter[]
-                    {   new SqlParameter("@CE",CE),
-                        new SqlParameter("@CM",CE)
+                    {   new SqlParameter("@CE",int.Parse(CE)),
+                        new SqlParameter("@CM",int.Parse(CE))
                     })).Tables[0]
                      );
             }
@@ -42,16 +42,16 @@ namespace MVC_MODEL__APP.Controlers
                 MessageBox.Show(CE + " > ne correspond à aucun enregistrement ");
             }
         }
-        public static void Modifier(int CODEETUDIANT, int CODEMODULE, float Note, DataGridView d)
+        public static void Modifier(string CODEETUDIANT, string CODEMODULE, string Note, DataGridView d)
         {
             try
             {
                 Controlers.DB.load_DGV(
                     d,
                     (Controlers.DB.PROC_DS_Params("UPDNOTE", new SqlParameter[]
-                    { new SqlParameter("@CE",CODEETUDIANT),
-                      new SqlParameter("@CM",CODEMODULE),
-                      new SqlParameter("@NOTE",Note)
+                    { new SqlParameter("@CE",int.Parse(CODEETUDIANT)),
+                      new SqlParameter("@CM",int.Parse(CODEMODULE)),
+                      new SqlParameter("@NOTE",float.Parse(Note))
                      })).Tables[0]
                 );
             }
@@ -60,13 +60,13 @@ namespace MVC_MODEL__APP.Controlers
                 MessageBox.Show("("+CODEETUDIANT+","+ CODEMODULE+ ") > ne correspond à aucun enregistrement ");
             }
         }
-        public static Models.Note Rechercher(int CODEET,int CODEMOD)
+        public static Models.Note Rechercher(string CODEET,string CODEMOD)
         {
             Models.Note e = new Models.Note();
             try
             {
                 DataTable t = Controlers.DB.PROC_DS_Params("unenote", new SqlParameter[]
-                {  new SqlParameter("@codee",CODEET),new SqlParameter("@codem",CODEMOD)
+                {  new SqlParameter("@codee",int.Parse(CODEET)),new SqlParameter("@codem",int.Parse(CODEMOD))
                 }).Tables[0];
                 if (t.Rows.Count != 0)
                     //instancier le Module trouvé

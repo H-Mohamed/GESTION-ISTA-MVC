@@ -19,7 +19,7 @@ namespace MVC_MODEL__APP.Views
         }
         public void set_behaviour()
         {
-            #region home refresh exit btns
+            //home refresh exit btns
             Home.Click += (object o, EventArgs e) =>
             {
                 MVC_MODEL__APP.Home.home();
@@ -32,10 +32,68 @@ namespace MVC_MODEL__APP.Views
             {
                 Application.Exit();
             };
-            #endregion
-            //DB controls
-
-            //Navcontrols
+            //DB controls 
+            Add.Click += (object o, EventArgs e) =>
+            {
+                try
+                {
+                    Controlers.CNOTE.Ajouter(cE.Text, cM.Text,note.Text,DGV);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
+            };
+            Del.Click += (object o, EventArgs e) =>
+            {
+                try
+                {
+                    Controlers.CNOTE.Supprimer(cE.Text,cM.Text, DGV);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
+            };
+            upd.Click += (object o, EventArgs e) =>
+            {
+                try
+                {
+                    Controlers.CNOTE.Modifier(cE.Text, cM.Text, note.Text, DGV);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
+            };
+            srch.Click += (object o, EventArgs e) =>
+            {
+                try
+                {
+                    Resultat_Search(cE.Text, cM.Text);
+                }
+                catch (Exception E)
+                {
+                    MessageBox.Show(E.Message);
+                }
+            };
+            //Navcontrols 
+            Precedent.Click += (object o, EventArgs e) =>
+            {
+                bs.MovePrevious();
+            };
+            Suivant.Click += (object o, EventArgs e) =>
+            {
+                bs.MoveNext();
+            };
+            dernier.Click += (object o, EventArgs e) =>
+            {
+                bs.MoveLast();
+            };
+            premier.Click += (object o, EventArgs e) =>
+            {
+                bs.MoveFirst();
+            };
 
         }
         public void data_loading()
@@ -47,6 +105,12 @@ namespace MVC_MODEL__APP.Views
         {
             bs.DataSource = Controlers.CNOTE.ALL();
             set_behaviour(); data_loading();
+        }
+        private void Resultat_Search(string CE,string CM)
+        {
+            cE.Text = Controlers.CNOTE.Rechercher(CE, CM).codeEtudiant.ToString();
+            cM.Text = Controlers.CNOTE.Rechercher(CE, CM).codeModule.ToString();
+            note.Text = Controlers.CNOTE.Rechercher(CE, CM).note.ToString(); 
         }
     }
 }

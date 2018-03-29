@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.Codep = new System.Windows.Forms.TextBox();
+            this.intitulé = new System.Windows.Forms.TextBox();
+            this.Code = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,30 +51,14 @@
             this.srch = new System.Windows.Forms.Button();
             this.Del = new System.Windows.Forms.Button();
             this.DGV = new System.Windows.Forms.DataGridView();
+            this.prevu = new System.Windows.Forms.DateTimePicker();
+            this.realise = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(823, 232);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 29);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "Hr";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(406, 232);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 29);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Masse Horaire";
             // 
             // label15
             // 
@@ -109,37 +90,29 @@
             this.label17.TabIndex = 38;
             this.label17.Text = "Code Module";
             // 
-            // textBox11
+            // Codep
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(697, 232);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(121, 30);
-            this.textBox11.TabIndex = 28;
+            this.Codep.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codep.Location = new System.Drawing.Point(507, 187);
+            this.Codep.Name = "Codep";
+            this.Codep.Size = new System.Drawing.Size(349, 30);
+            this.Codep.TabIndex = 27;
             // 
-            // textBox13
+            // intitulé
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(507, 187);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(349, 30);
-            this.textBox13.TabIndex = 27;
+            this.intitulé.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intitulé.Location = new System.Drawing.Point(507, 146);
+            this.intitulé.Name = "intitulé";
+            this.intitulé.Size = new System.Drawing.Size(349, 30);
+            this.intitulé.TabIndex = 26;
             // 
-            // textBox14
+            // Code
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(507, 146);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(349, 30);
-            this.textBox14.TabIndex = 26;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(687, 106);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(169, 30);
-            this.textBox15.TabIndex = 29;
+            this.Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Code.Location = new System.Drawing.Point(687, 106);
+            this.Code.Name = "Code";
+            this.Code.Size = new System.Drawing.Size(169, 30);
+            this.Code.TabIndex = 29;
             // 
             // label8
             // 
@@ -350,11 +323,52 @@
             this.DGV.Size = new System.Drawing.Size(391, 499);
             this.DGV.TabIndex = 98;
             // 
+            // prevu
+            // 
+            this.prevu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevu.Location = new System.Drawing.Point(507, 223);
+            this.prevu.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.prevu.Name = "prevu";
+            this.prevu.Size = new System.Drawing.Size(349, 29);
+            this.prevu.TabIndex = 99;
+            // 
+            // realise
+            // 
+            this.realise.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.realise.Location = new System.Drawing.Point(507, 258);
+            this.realise.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.realise.Name = "realise";
+            this.realise.Size = new System.Drawing.Size(349, 29);
+            this.realise.TabIndex = 99;
+            this.realise.Value = new System.DateTime(2018, 3, 29, 20, 54, 33, 0);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(406, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 29);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Réalisé le";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(406, 229);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 29);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Prévue le";
+            // 
             // ModuleV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 487);
+            this.Controls.Add(this.realise);
+            this.Controls.Add(this.prevu);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.Refresh);
@@ -372,15 +386,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.Codep);
+            this.Controls.Add(this.intitulé);
+            this.Controls.Add(this.Code);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModuleV";
             this.Text = "Module";
@@ -394,15 +407,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox Codep;
+        private System.Windows.Forms.TextBox intitulé;
+        private System.Windows.Forms.TextBox Code;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -420,5 +430,9 @@
         private System.Windows.Forms.Button srch;
         private System.Windows.Forms.Button Del;
         private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.DateTimePicker prevu;
+        private System.Windows.Forms.DateTimePicker realise;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

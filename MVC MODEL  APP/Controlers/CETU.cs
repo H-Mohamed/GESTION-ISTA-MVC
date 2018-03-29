@@ -33,7 +33,7 @@ namespace MVC_MODEL__APP.Controlers
                 Controlers.DB.load_DGV(
                     d,
                     (Controlers.DB.PROC_DS_Params("DELETD", new SqlParameter[]
-                    { new SqlParameter("@CE",CE) })).Tables[0]
+                    { new SqlParameter("@CE",int.Parse(CE)) })).Tables[0]
                      );
             }
             catch
@@ -49,7 +49,7 @@ namespace MVC_MODEL__APP.Controlers
                 Controlers.DB.load_DGV(
                     d,
                     (Controlers.DB.PROC_DS_Params("UPDETU", new SqlParameter[]
-                    {  new SqlParameter("@CE",CODEET), new SqlParameter("@NOME",NOM)
+                    {  new SqlParameter("@CE",int.Parse(CODEET)), new SqlParameter("@NOME",NOM)
                      , new SqlParameter("@PNOME",PRENOM), new SqlParameter("@DATEN",DateTime.Parse(DATEN))
                      , new SqlParameter("@EMAIL",EMAIL)
                      })).Tables[0]
@@ -60,13 +60,13 @@ namespace MVC_MODEL__APP.Controlers
                 MessageBox.Show(CODEET + " > ne correspond à aucun enregistrement ");
             }
         }
-        public static Models.Etudiant Rechercher(int CODEET)
+        public static Models.Etudiant Rechercher(string CODEET)
         {
             Models.Etudiant e = new Models.Etudiant();
             try
             {
                 DataTable t = Controlers.DB.PROC_DS_Params("unetudiant", new SqlParameter[]
-                {  new SqlParameter("@codee",CODEET)  }).Tables[0];
+                {  new SqlParameter("@codee",int.Parse(CODEET))  }).Tables[0];
                 if(t.Rows.Count!=0)
                     //instancier l'Etudiant trouvé
                     e = new Models.Etudiant(int.Parse(t.Rows[0][0].ToString()),

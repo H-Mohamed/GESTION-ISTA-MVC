@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.premier = new System.Windows.Forms.Button();
             this.dernier = new System.Windows.Forms.Button();
@@ -45,16 +44,14 @@
             this.upd = new System.Windows.Forms.Button();
             this.srch = new System.Windows.Forms.Button();
             this.Del = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.note = new System.Windows.Forms.TextBox();
+            this.cE = new System.Windows.Forms.TextBox();
+            this.cM = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clear = new System.Windows.Forms.PictureBox();
             this.DGV = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -142,27 +139,17 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(404, 186);
+            this.label15.Location = new System.Drawing.Point(427, 205);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 29);
+            this.label15.Size = new System.Drawing.Size(51, 29);
             this.label15.TabIndex = 74;
-            this.label15.Text = "Professeur";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(404, 144);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 29);
-            this.label16.TabIndex = 73;
-            this.label16.Text = "Intitulé";
+            this.label15.Text = "Note";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(403, 106);
+            this.label17.Location = new System.Drawing.Point(427, 128);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(123, 29);
             this.label17.TabIndex = 72;
@@ -268,67 +255,29 @@
             this.Del.Text = "Supprimer";
             this.Del.UseVisualStyleBackColor = true;
             // 
-            // textBox13
+            // note
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(518, 186);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(336, 30);
-            this.textBox13.TabIndex = 61;
+            this.note.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.note.Location = new System.Drawing.Point(573, 200);
+            this.note.Name = "note";
+            this.note.Size = new System.Drawing.Size(69, 30);
+            this.note.TabIndex = 61;
             // 
-            // textBox14
+            // cE
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(518, 145);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(336, 30);
-            this.textBox14.TabIndex = 60;
+            this.cE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cE.Location = new System.Drawing.Point(573, 164);
+            this.cE.Name = "cE";
+            this.cE.Size = new System.Drawing.Size(139, 30);
+            this.cE.TabIndex = 60;
             // 
-            // textBox15
+            // cM
             // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(685, 105);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(169, 30);
-            this.textBox15.TabIndex = 63;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(404, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 29);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "Date prévue";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(404, 265);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 29);
-            this.label4.TabIndex = 74;
-            this.label4.Text = "Date Réelle";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(518, 226);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(336, 27);
-            this.dateTimePicker1.TabIndex = 85;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(518, 265);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(338, 27);
-            this.dateTimePicker2.TabIndex = 85;
+            this.cM.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cM.Location = new System.Drawing.Point(573, 128);
+            this.cM.Name = "cM";
+            this.cM.Size = new System.Drawing.Size(139, 30);
+            this.cM.TabIndex = 63;
             // 
             // pictureBox1
             // 
@@ -361,14 +310,32 @@
             this.DGV.Size = new System.Drawing.Size(391, 467);
             this.DGV.TabIndex = 98;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(648, 201);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 29);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "/20";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("ft3", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(427, 165);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 29);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "Code Etudiant";
+            // 
             // NoteV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 456);
             this.Controls.Add(this.DGV);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.Exit);
@@ -377,10 +344,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.clear);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.premier);
             this.Controls.Add(this.dernier);
@@ -390,9 +356,9 @@
             this.Controls.Add(this.upd);
             this.Controls.Add(this.srch);
             this.Controls.Add(this.Del);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.note);
+            this.Controls.Add(this.cE);
+            this.Controls.Add(this.cM);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NoteV";
             this.Text = "NoteV";
@@ -415,7 +381,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox clear;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button premier;
         private System.Windows.Forms.Button dernier;
@@ -425,14 +390,12 @@
         private System.Windows.Forms.Button upd;
         private System.Windows.Forms.Button srch;
         private System.Windows.Forms.Button Del;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox note;
+        private System.Windows.Forms.TextBox cE;
+        private System.Windows.Forms.TextBox cM;
         private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

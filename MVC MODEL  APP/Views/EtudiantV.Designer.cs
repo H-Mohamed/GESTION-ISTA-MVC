@@ -33,11 +33,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.Prenom = new System.Windows.Forms.TextBox();
+            this.Nom = new System.Windows.Forms.TextBox();
+            this.Code = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.srch = new System.Windows.Forms.Button();
             this.Del = new System.Windows.Forms.Button();
             this.DGV = new System.Windows.Forms.DataGridView();
+            this.DNEt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -110,45 +110,37 @@
             this.label12.TabIndex = 38;
             this.label12.Text = "Code Etudiant";
             // 
-            // textBox6
+            // Email
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(509, 269);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(349, 30);
-            this.textBox6.TabIndex = 28;
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(509, 269);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(349, 30);
+            this.Email.TabIndex = 28;
             // 
-            // textBox7
+            // Prenom
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(685, 227);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 30);
-            this.textBox7.TabIndex = 27;
+            this.Prenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prenom.Location = new System.Drawing.Point(509, 187);
+            this.Prenom.Name = "Prenom";
+            this.Prenom.Size = new System.Drawing.Size(349, 30);
+            this.Prenom.TabIndex = 26;
             // 
-            // textBox8
+            // Nom
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(509, 187);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(349, 30);
-            this.textBox8.TabIndex = 26;
+            this.Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nom.Location = new System.Drawing.Point(509, 146);
+            this.Nom.Name = "Nom";
+            this.Nom.Size = new System.Drawing.Size(349, 30);
+            this.Nom.TabIndex = 25;
             // 
-            // textBox9
+            // Code
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(509, 146);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(349, 30);
-            this.textBox9.TabIndex = 25;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(685, 106);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(173, 30);
-            this.textBox10.TabIndex = 29;
+            this.Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Code.Location = new System.Drawing.Point(685, 106);
+            this.Code.Name = "Code";
+            this.Code.Size = new System.Drawing.Size(173, 30);
+            this.Code.TabIndex = 29;
             // 
             // label1
             // 
@@ -359,11 +351,20 @@
             this.DGV.Size = new System.Drawing.Size(391, 497);
             this.DGV.TabIndex = 98;
             // 
+            // DNEt
+            // 
+            this.DNEt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.93F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DNEt.Location = new System.Drawing.Point(555, 228);
+            this.DNEt.Name = "DNEt";
+            this.DNEt.Size = new System.Drawing.Size(302, 29);
+            this.DNEt.TabIndex = 99;
+            // 
             // EtudiantV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 482);
+            this.Controls.Add(this.DNEt);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.Refresh);
@@ -386,11 +387,10 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Prenom);
+            this.Controls.Add(this.Nom);
+            this.Controls.Add(this.Code);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EtudiantV";
             this.Text = "Etudiant";
@@ -409,11 +409,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.TextBox Prenom;
+        private System.Windows.Forms.TextBox Nom;
+        private System.Windows.Forms.TextBox Code;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -431,5 +430,6 @@
         private System.Windows.Forms.Button srch;
         private System.Windows.Forms.Button Del;
         private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.DateTimePicker DNEt;
     }
 }
